@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Inferência",
+    "section": "",
+    "text": "1 Introdução à Inferência\nA inferência estatística tem como objetivo fazer afirmações e assim tirar conclusões sobre um conjunto de dados de uma população. A partir da inferência conseguimos estimar parâmetros como Média, Desvio Padrão, Curtose, entre outros.\nFazemos inferência a partir de uma amostra da população alvo. A partir da informação limitada, podemos fazer palpites sobre os dados de toda a população."
+  },
+  {
+    "objectID": "index.html#métodos-de-amostragem",
+    "href": "index.html#métodos-de-amostragem",
+    "title": "Inferência",
+    "section": "1.1 Métodos de Amostragem",
+    "text": "1.1 Métodos de Amostragem\n\n1.1.1 Amostragem probabilística\n\nAmostragem Aleatória Simples(AAS):\nAmostragem Sistemática:\nAmostragem Estratificada:\nAmostragem por conglomerados:\n\n\n\n1.1.2 Amostragem não probabilística\n\nAmostragem por voluntariado\nAmostragem por julgamento\nAmostragem por cotas"
+  },
+  {
+    "objectID": "conteudo/Lei_Fraca.html#convergência-em-probabilidade",
+    "href": "conteudo/Lei_Fraca.html#convergência-em-probabilidade",
+    "title": "2  Lei Fraca dos Grandes Números",
+    "section": "2.1 Convergência em probabilidade",
+    "text": "2.1 Convergência em probabilidade\nTemos por definição que uma sequência de v.a’s converge em probabilidade se\n\\[\n\\lim_{n\\to\\infty} P(|X_{n} - X| \\geq \\epsilon) = 0,\n\\] ou, equivalentemente,\n\\[\n\\lim_{n\\to\\infty} P(|X_{n} - X| \\leq \\epsilon) = 1,\n\\]\nou seja, a probabilidade de um valor observado incomum (a diferença entre a sequência \\(\\{X_n\\}\\) e a variável aleatória \\(X\\)) se torna cada vez menor conforme aproximamos do limite.\nA convergência em probabilidade também implica convergência em distribuição, e é util para sabermos as características de determinado grupo de dados.\n\n2.1.1 Exemplo (retirado da wikipédia)\n\nEste exemplo não deve ser tomado literalmente. Considere o seguinte experimento. Primeiramente, selecione uma pessoa na rua. Considere X sua altura, que é ex ante uma variável aleatória. Então, peça a outras pessoas que estimem sua altura a olho. Considere Xn a média das primeiras n respostas. Então, se não houver erro sistemático, a sequência Xn convergirá em probabilidade à variável aleatória X pela lei dos grandes números.\nSuponha que uma pessoa pegue um arco e comece a atirar flechas em um alvo. Considere Xn sua pontuação na n-ésima flecha. Inicialmente, ele não fará nenhum ponto muitas vezes, mas conforme o tempo passa e sua habilidade aumenta, ele ficara cada mais próximo de acertar a mosca e marcar 10 pontos. Depois de anos de prática, a probabilidade de que ele atinja pontuação diferente de 10 ficará cada vez menor e convergirá a 0. Assim, a sequência Xn converge em probabilidade a \\(\\{X=10\\}\\) Entretanto, note que Xn não converge quase certamente. Não importa quão profissional o arqueiro se torne, haverá sempre uma pequena probabilidade de cometer um erro. Assim, a sequência \\(\\{X_n\\}\\) nunca ficará estacionária. Haverá sempre pontuações não perfeitas, ainda que se tornem cada vez menos frequentes."
+  },
+  {
+    "objectID": "conteudo/Lei_Fraca.html#lei-fraca-dos-grandes-números",
+    "href": "conteudo/Lei_Fraca.html#lei-fraca-dos-grandes-números",
+    "title": "2  Lei Fraca dos Grandes Números",
+    "section": "2.2 Lei Fraca dos Grandes Números",
+    "text": "2.2 Lei Fraca dos Grandes Números\nA lei fraca determina que a média da amostra Xn converge em probabilidade para \\(E(X)\\).\n\\[\n\\lim_{n\\to\\infty} P(|\\overline{X}_{n} - \\mu| &lt; \\epsilon) = 1.\n\\]"
+  },
+  {
+    "objectID": "conteudo/Lei_Fraca.html#desigualdade-de-markov",
+    "href": "conteudo/Lei_Fraca.html#desigualdade-de-markov",
+    "title": "2  Lei Fraca dos Grandes Números",
+    "section": "2.3 Desigualdade de Markov",
+    "text": "2.3 Desigualdade de Markov\nSeja X uma váriável aleatória não negativa e a &gt; 0. A probabilidade de \\(x\\) ser maior ou igual a \\(a\\) é menor ou igual á esperança de \\(X\\) dividido por \\(a\\)\n\\[\nP(x \\geq a) \\leq \\frac{E(x)}{a}.\n\\] Sendo X uma v.a. não-negativa, temos que:\n\\[\nE(x) = \\int_0^a xf(x)dx + \\int_a^\\infty xf(x)dx \\geq \\int_a^\\infty af(x)dx = aP(X \\geq a),\n\\] o que prova a desigualdade acima."
+  },
+  {
+    "objectID": "conteudo/Lei_Fraca.html#desigualdade-de-chebyshev",
+    "href": "conteudo/Lei_Fraca.html#desigualdade-de-chebyshev",
+    "title": "2  Lei Fraca dos Grandes Números",
+    "section": "2.4 Desigualdade de Chebyshev",
+    "text": "2.4 Desigualdade de Chebyshev\nSeja X uma v.a. com distribuição de média \\(\\mu\\) e desvio padrão \\(\\sigma\\), temos também que não mais do que \\(\\frac{1}{k^2}\\) dos valores estarão a mais do que k desvios padrão da média.\n\\[\nP(|X - \\mu| \\geq k\\sigma) \\leq \\frac{1}{k^2}\n\\]\nSe aplicarmos a Desigualdade de Markov para a variável \\(|\\overline{X}_{n} - \\mu|\\), iremos obter a desigualdade de Chebyshev\n\\[\nP(|\\overline{X}_{n} - \\mu| &lt; \\epsilon)\n\\] \\[\n= P(|\\overline{X}_{n} - \\mu|^2 &lt; \\epsilon^2) \\geq 1- \\frac{E[(\\overline{X}_{n} - \\mu)^2]}{\\epsilon^2}\n\\] \\[\n= 1 - \\frac{\\sigma^2}{n\\epsilon^2} \\geq 1 - \\delta\n\\]"
+  },
+  {
+    "objectID": "conteudo/TCL.html#função-geradora-de-momentos",
+    "href": "conteudo/TCL.html#função-geradora-de-momentos",
+    "title": "3  Teorema Central do Limite",
+    "section": "3.1 Função Geradora de Momentos",
+    "text": "3.1 Função Geradora de Momentos\nA partir da função geradora de momentos, podemos derivar os momentos de uma v.a. \\(X\\), obtendo assim propriedades importantes como média e variância e até a distribuição da variável. Para obtermos esses momentos, temos que avaliar as derivadas da função em torno de \\(t = 0\\).\n\\[\nm_{x}(t) = E(e^{tX}) = \\int_{-∞}^{∞}e^{tx}f_{x}(x)dx\n\\] se X é uma v.a. contínua, e\n\\[\nm_{x}(t) = E(e^{tX}) = \\sum_{x}e^{tx}f_{x}(x)\n\\] se X é uma v.a. discreta.\n\n3.1.1 Propriedades\n\nSe \\(M_{x}(t)\\) existir, então \\(M_{x}(t)\\) será contínua e diferenciável em uma vizinhança em torno de 0.\nOs momentos de ordem \\(r\\) de \\(f_{x}(·)\\) podem ser obtidos da seguinte forma \\[\\frac{d^r}{dt^r} m_{x}(0) = E(X^r) = \\mu_{r}.\\]\nSe \\(M_{x}(t) = M_{y}(t)\\), então: \\[ X\\overset{\\mathrm{iid}}{\\sim}Y.\\] Portanto, a função geradora de momentos determina a distribuição de uma v.a. X.\nA FGM da soma de variáveis aleatórias independentes é o produto das FGM de cada uma delas: \\[M_{x+y}(t) = M_{x}(t)M_{y}(t).\\]"
+  },
+  {
+    "objectID": "conteudo/TCL.html#transformada-de-fourier",
+    "href": "conteudo/TCL.html#transformada-de-fourier",
+    "title": "3  Teorema Central do Limite",
+    "section": "3.2 Transformada de Fourier",
+    "text": "3.2 Transformada de Fourier\nUtilizamos a transformada de Fourier para achar uma função que se aproxime da função de distribuição da variável \\(X\\). Essa transformada expressa uma função em termos de funções de base sinusoidal, sendo ela A partir do segundo momento amostral conseguimos a variância de \\(X\\). Para entender mais sobre a transformada de fourier com uma representação gráfica, veja o video na página a seguir: https://3blue1brown.netlify.app/lessons/fourier-transforms"
+  },
+  {
+    "objectID": "conteudo/TCL.html#teorema-central-do-limite",
+    "href": "conteudo/TCL.html#teorema-central-do-limite",
+    "title": "3  Teorema Central do Limite",
+    "section": "3.3 Teorema Central do Limite",
+    "text": "3.3 Teorema Central do Limite\nSeja \\(\\{X_{i}\\}_{i \\geq 1}\\) uma sequencia de v.a’s iid, \\(X_{i}\\) com média \\(\\mu\\) e variância $^2 $ finitas. Sendo \\(S_{n}\\) a soma dessas v.a.’s, então a distribuição \\(z_{n} = \\frac{S_{n} - n\\mu}{\\sigma \\sqrt{n}}\\) converge em distribuição para uma \\(N(0,1)\\) quando o n é suficientemente grande. Esse teorema nos permite utilizar a normal como base em amostras grandes que não possuem distribuição especifica."
+  },
+  {
+    "objectID": "conteudo/Distribuicoes_normal.html#distribuições-amostrais",
+    "href": "conteudo/Distribuicoes_normal.html#distribuições-amostrais",
+    "title": "4  Distribuições derivadas da Normal",
+    "section": "4.1 Distribuições amostrais",
+    "text": "4.1 Distribuições amostrais\n\n4.1.1 Qui-Quadrado\nA distribuição qui-quadrado pode ser simulada a partir da distribuição normal. Por definição, se \\(Z_{1},Z_{2},\\ldots Z_{k}\\ \\) , forem k distribuições normais padronizadas (ou seja, média 0 e desvio padrão 1) independentes, então a soma de seus quadrados é uma distribuição qui-quadrado com k graus de liberdade:\n\\[\\chi_{k}^{2}=Z_{1}^{2}+Z_{2}^{2}+\\ldots +Z_{k}^{2}\\,\\]\na definição é que a soma de duas qui-quadrado independentes também é uma qui-quadrado: \\[\\chi _{a}^{2}+\\chi _{b}^{2}=\\chi _{{a+b}}^{2}.\\] Definição: Se X é uma v.a. com densidade\n\\[\nf_{x} (x) = \\frac{(\\frac{1}{2})^\\frac{k}{2}}{\\Gamma(k/2)}x^{k/2-1}e^{-\\frac{1}{2}x} * I{(0, \\infty)}(x)\n\\] então \\(X\\) segue uma distribuiçãao qui-quadrado com k graus de liberdade (denotaremos \\(X \\sim \\chi_{k}^{2}\\)), k inteiro.\nPropriedades:\n\n\\(E[X] = \\frac{k/2}{1/2} = k\\)  e  \\(V[X] = \\frac{k/2}{(1/2)^2} = 2k\\);\n\n\\(M_{x}(t)=[\\frac{1/2}{1/2-t}]^{k/2} = [\\frac{1}{1-2t}]^{k/2}\\);\n\nCaso Gama:\nA distribuição \\(\\chi_{k}^{2}\\) é um caso particular da distribuição gama com parâmetros forma (\\(k\\)) e escala(\\(\\theta\\)) dados respectivamente por \\(\\alpha = k/2\\) e \\(\\beta = {\\theta} = 2\\).\n\\[\n\\chi_{k}^{2} \\sim Gama(\\frac{k}{2},{2})\n\\] Ou seja, se quisermos fazer uma inferência sobre um conjunto de v.a.’s com distribuição \\(Gama(a, \\beta)\\) parâmetro \\(\\theta\\).\n\\[\n\\theta = 2\n\\]\nGráfico da distribuição qui quadrado\n\n\n\n\n\nGráfico da distribuição gama com parâmetros (k/2, 2)\n\n\n\n\n\n\n\n4.1.2 F\nO valor observado de uma variável aleatória de distribuição \\(F\\) com parâmetros \\(m\\) e \\(n\\) surge como a razão de dois valores observados de distribuição qui-quadrado apropriadamente escalados:\n\\[\nX = \\frac{U/m}{V/n} \\sim F_{m,n},\n\\]\nem que\n\n\\(U\\) e \\(V\\) têm distribuições qui-quadrado com graus de liberdade \\(m\\) e \\(n\\) respectivamente e\n\\(U\\) e \\(U\\) são independentes.\n\n\\[\nU = \\chi_{m}^{2}\n\\] \\[\nV = \\chi_{n}^{2}\n\\] \\[\nU \\perp V\n\\]\nDefinição: Se X é uma v.a. com densidade\n\\[\nf_{x} (x) = \\frac{\\Gamma(\\frac{m+n}{2})(\\frac{m}{n})^{m/2}x^{\\frac{m}{2}-1}}{\\Gamma(\\frac{m}{2})\\Gamma(\\frac{n}{2})[1+\\frac{mx}{n}]^{\\frac{m+n}{2}}} * I{(0, \\infty)}(x).\n\\]\nPropriedades:\n\n\\(E[X] = \\frac{n}{n-2}\\) para n &gt; 2\n\\(V[X] = \\frac{2n^2(m+n -2)}{m(n-2)^2(n - 4)}\\) para n &gt; 4;\n\n\\(M_{x}(t)=\\frac{\\frac{[\\frac{1}{1-2t}]^{m/2}}{m}}{\\frac{[\\frac{1}{1-2t}]^{n/2}}{n}} = \\frac{1^{\\frac{m-n}{2}}n}{(1-2t)^{\\frac{m-n}{2}}m}\\), t &lt; m; t &lt; n;\n\nEquivalentemente, a variável aleatória da distribuição F também pode ser escrita como\n\\({\\displaystyle X={\\frac {s_{1}^{2}}{\\sigma _{1}^{2}}}\\;/\\;{\\frac {s_{2}^{2}}{\\sigma _{2}^{2}}}}\\)\nem que \\({\\displaystyle s_{1}^{2}}\\) e \\({\\displaystyle s_{2}^{2}}\\) são as somas dos quadrados \\({\\displaystyle S_{1}^{2}}\\) e \\({\\displaystyle S_{2}^{2}}\\) de dois processos normais com variâncias \\({\\displaystyle \\sigma _{1}^{2}}\\) e \\({\\displaystyle \\sigma _{2}^{2}}\\) divididas pelo número correspondente de \\(\\chi ^{2}\\) graus de liberdades.\n\\(d_{1}\\) e \\(d_{2}\\) são respectivamente \\({\\displaystyle s_{1}^{2}={\\frac {S_{1}^{2}}{d_{1}}}}\\) e \\({\\displaystyle s_{2}^{2}={\\frac {S_{2}^{2}}{d_{2}}}}\\).\n\n\n4.1.3 T\n\\[\nX = \\frac{Z}{\\sqrt{U/k}} \\sim t_{k},\n\\]"
+  },
+  {
+    "objectID": "conteudo/Distribuicoes_normal.html#teoremas",
+    "href": "conteudo/Distribuicoes_normal.html#teoremas",
+    "title": "4  Distribuições derivadas da Normal",
+    "section": "4.2 Teoremas",
+    "text": "4.2 Teoremas\nSe \\(X_{i}\\sim N(0;1), i = 1,..., k\\) são independentes, então\n\\[\nU = \\sum_{i=1}^{k}(x_{i})^2 \\sim \\chi _{k}^2\n\\]\nIsto é, U tem distribuição qui-quadrado com k graus de liberdade"
+  },
+  {
+    "objectID": "conteudo/Propriedades_Estimadores.html#estimadores",
+    "href": "conteudo/Propriedades_Estimadores.html#estimadores",
+    "title": "5  Propriedades dos estimadores",
+    "section": "5.1 Estimadores",
+    "text": "5.1 Estimadores\nEstimadores são estatísticas que assumem valores no espaço amostral. São utilizados para estimar uma função de um parâmetro, seja esse conhecido ou desconhecido. Podemos encontrar situações que a função é o próprio paramentro, sendo assim \\(g(\\theta) = \\theta\\)."
+  },
+  {
+    "objectID": "conteudo/Propriedades_Estimadores.html#erro-quadrático-médio-mse",
+    "href": "conteudo/Propriedades_Estimadores.html#erro-quadrático-médio-mse",
+    "title": "5  Propriedades dos estimadores",
+    "section": "5.2 Erro Quadrático Médio (MSE)",
+    "text": "5.2 Erro Quadrático Médio (MSE)\nEm muitas situações, deseja-se comparar se um estimador é melhor que outro. Para isso utilizamos o Erro Quadrático Médio (EQM). O estimador \\(T_{1}(X)\\) é melhor que o estimador \\(T_{2}(X)\\) se o erro quadrado médio de \\(T_{1}(X)\\) for menor que o de \\(T_{2}(X)\\) para todo \\(\\theta\\).\n\\[\nEQM[T_{1}(X)] &lt; EQM[T_{2}(X)]\n\\]\nA definição de estatística é função da amostra. Todo estimador é uma estatística.\nCaracteristicas de um bom estimador:\n\nMédia próxima ou igual a \\(g(\\theta)\\);\n\nMenor variância possível."
+  },
+  {
+    "objectID": "conteudo/Propriedades_Estimadores.html#estimador-assintoticamente-não-viciado",
+    "href": "conteudo/Propriedades_Estimadores.html#estimador-assintoticamente-não-viciado",
+    "title": "5  Propriedades dos estimadores",
+    "section": "5.3 Estimador assintoticamente não viciado",
+    "text": "5.3 Estimador assintoticamente não viciado\nUm estimador \\(T(X)\\) é assintoticamente não viciado para \\(g(\\theta)\\) se o víés (erro) do estimador é igual a 0 quando n tente ao infinito\n\\[\nlim_{n\\rightarrow\\infty} B(T(X)) = 0,\n\\] ou equivalentemente, se a esperança do estimador for igual a uma função do parâmetro\n\\[\nlim_{n\\rightarrow\\infty} E[(T(X))] = g(\\theta).\n\\] Portanto, ele não possui vício e pode estimar fiélmente o parâmetro se quando n tende ao infinito.\n##Estimador Consistente (fracamente)\nA principal ferramenta para verificarmos a consistência de um estimador é a desigualdade de chebyshev.\nSeja \\(X\\) uma variável aleatória com média \\(\\mu\\), então: \\[\nP(|X-\\mu| \\geq \\epsilon) \\leq \\frac{\\sigma^2}{\\epsilon^2}\n\\]\nOu seja, a probabilidade do módulo da diferença ser maior ou igual ao erro do estimador é menor ou igual à razão da variância com o erro ao quadrado.\nResultados uteis para provar a consistência de um estimador:\n\nO valor esperado da sequência de estimadores \\(\\{T_{n}\\}\\) converge para \\(\\theta\\) quando o limite de n tende ao infinito.\n\n\\[\nlim_{n\\rightarrow\\infty} E(T_{n}) = \\theta\n\\]\n\nO variância da sequência de estimadores \\(\\{T_{n}\\}\\) converge para 0 quando o limite de n tende ao infinito. (O valor do estimador é um ponto fixo, não varia).\n\n\\[\nlim_{n\\rightarrow\\infty} V(T_{n}) = 0\n\\] Por exemplo, se considerarmos a média amostral \\(\\overline{X}\\), temos que \\(E(\\overline{X}) = \\mu\\) e \\(V(\\overline{X}) = \\frac{\\sigma^2}{n} \\rightarrow 0\\), quando \\(n \\rightarrow \\infty\\)."
+  },
+  {
+    "objectID": "conteudo/Modelo_estatistico.html#suporte",
+    "href": "conteudo/Modelo_estatistico.html#suporte",
+    "title": "6  Modelo Estatístico",
+    "section": "6.1 Suporte",
+    "text": "6.1 Suporte"
+  },
+  {
+    "objectID": "conteudo/Modelo_estatistico.html#modelo-paramétrico",
+    "href": "conteudo/Modelo_estatistico.html#modelo-paramétrico",
+    "title": "6  Modelo Estatístico",
+    "section": "6.2 Modelo Paramétrico",
+    "text": "6.2 Modelo Paramétrico"
+  },
+  {
+    "objectID": "conteudo/Modelo_estatistico.html#parametrização",
+    "href": "conteudo/Modelo_estatistico.html#parametrização",
+    "title": "6  Modelo Estatístico",
+    "section": "6.3 Parametrização",
+    "text": "6.3 Parametrização"
+  },
+  {
+    "objectID": "conteudo/Estatistica_suficiente.html#princípio-da-suficiência",
+    "href": "conteudo/Estatistica_suficiente.html#princípio-da-suficiência",
+    "title": "7  Estatísticas Suficientes",
+    "section": "7.1 Princípio da Suficiência",
+    "text": "7.1 Princípio da Suficiência\nSe \\(T = T (X)\\) é uma estatística suficiente para \\(\\theta\\), então toda inferência sobre \\(\\theta\\) deve depender da amostra \\(X_{1},...,X_{n}\\) somente através do valor de T (X). Se x e y são dois pontos amostrais tais que \\(T (x) = T (y)\\), então toda inferência sobre \\(\\theta\\) deve ser a mesma, independentemente de observamos \\(X = x\\) ou \\(X = y\\).\n\n7.1.1 Critério da fatoração de Neyman\nSeja \\(X= (X_{1},...,X_{n})\\) uma amostra aleatória de tamanho n de \\(f(·|\\theta)\\), com função de verossimilhança \\(L(\\theta;x)\\). Temos, então, que a estatística \\(T = T(X)\\) é suficiente para \\(\\theta\\) se, e somente se, pudermos escrever: \\[\nL(\\theta;x) = h(X_{1},...,X_{n})g(\\theta;T(X_{1},...,X_{n}))\n\\]\nOu seja, a função de verossimilhança de X depende de uma função \\(h(X_{1},...,X_{n})\\) que representa os dados da amostra e \\(g(\\theta;T(X_{1},...,X_{n}))\\), uma função que depende apenas de uma estatística suficiente escolhida e do parâmetro de interesse \\(\\theta\\)."
+  },
+  {
+    "objectID": "conteudo/Estatistica_suficiente.html#estatisticas-conjuntamente-suficientes",
+    "href": "conteudo/Estatistica_suficiente.html#estatisticas-conjuntamente-suficientes",
+    "title": "7  Estatísticas Suficientes",
+    "section": "7.2 Estatisticas conjuntamente suficientes",
+    "text": "7.2 Estatisticas conjuntamente suficientes\nDefinição:\nAs estatística \\(T_{1}=T_{1}(X),...,T_{k}=T_{k}(X)\\) são conjuntamente suficientes para \\(\\theta\\) se a distribuição condicional de \\(X_{1},...,X_{n}\\) dado \\(T_{1}=t_{1},...,T_{k}=t_{k}\\) for independente de \\(\\theta\\).\n\n7.2.1 Critério da fatoração de Neyman"
+  },
+  {
+    "objectID": "conteudo/Familias_exponenciais.html#família-exponencial-unidimensional",
+    "href": "conteudo/Familias_exponenciais.html#família-exponencial-unidimensional",
+    "title": "8  Famílias Exponenciais",
+    "section": "8.1 Família Exponencial Unidimensional:",
+    "text": "8.1 Família Exponencial Unidimensional:\nA família exponencial é uma classe onde os estimadores costumam serconsistentes s suporte é onde a va assume valores positivos \\[\nf (x|θ) = h(x)c(θ) exp \\{ T (x)d(θ) \\} ,\n\\]\nEx: X~Ber(n,0); n conhecido. \\[\nf(x| \\theta ) : \\Omega xx \\Theta -&gt; R\n\\]\nsoma de bernoullis independentes resulta em uma exponencial\n\\[\n= exp  \\{ log [ \\binom{n}{x}*(1-\\theta)^n]\\}*exp\\{xlog( \\frac{\\theta}{1-\\theta})\\}\n\\]\n\\[\n= exp\\{ log \\binom{n}{x}+ nlog(1-\\theta) + xlog(\\frac{\\theta}{1-\\theta})\\}\n\\]\nportanto, a distribuição binomial pertence a familia exponencial.\nex\nexponencial deslocada \\[\nf(x|\\theta) = exp\\{(x+\\theta)\\}\n\\]\n\nt = 50\nx = t:(t+10)\n\n\ny = exp(-x- t)\n\nplot(x, y, type = \"l\", lty = 1)"
+  }
+]
