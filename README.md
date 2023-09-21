@@ -1,0 +1,2 @@
+# Inferencia
+AGR NOIS PASSA RAPEIZE
